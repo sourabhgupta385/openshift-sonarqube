@@ -1,3 +1,27 @@
+plugins:
+  sites:
+  - id: "default"
+    url: "https://updates.jenkins.io/update-center.json"
+jenkins:
+  disableRememberMe: false
+  labelString: "master"
+  mode: NORMAL
+  numExecutors: 5
+  primaryView:
+    all:
+      name: "all"
+  quietPeriod: 1
+  rawBuildsDir: "${ITEM_ROOTDIR}/builds"
+  scmCheckoutRetryCount: 0
+  slaveAgentPort: 50000
+  views:
+  - all:
+      name: "all"
+unclassified:
+  bitbucketEndpointConfiguration:
+    endpoints:
+    - bitbucketCloudEndpoint:
+        manageHooks: false
 tool:
   git:
     installations:
@@ -12,26 +36,3 @@ tool:
     installations:
     - home: "/usr/lib/jvm/java-1.8.0"
       name: "JAVA_HOME"
-  nodejs:
-    defaultProperties:
-    - installSource:
-        installers:
-        - nodeJSInstaller:
-            npmPackagesRefreshHours: 72
-    installations:
-    - name: "NODE_PATH"
-      properties:
-      - installSource:
-          installers:
-          - nodeJSInstaller:
-              id: "9.11.2"
-              npmPackages: "artillery mocha"
-              npmPackagesRefreshHours: 72
-  sonarRunnerInstallation:
-    installations:
-    - name: "SONARQUBE_SCANNER"
-      properties:
-      - installSource:
-          installers:
-          - sonarRunnerInstaller:
-              id: "3.3.0.1492"
