@@ -1,38 +1,4 @@
 plugins:
 required:
    nodejs: "9.11.2"
-jenkins:
-  disableRememberMe: false
-  labelString: "master"
-  mode: NORMAL
-  numExecutors: 5
-  primaryView:
-    all:
-      name: "all"
-  quietPeriod: 1
-  rawBuildsDir: "${ITEM_ROOTDIR}/builds"
-  scmCheckoutRetryCount: 0
-  slaveAgentPort: 50000
-  views:
-  - all:
-      name: "all"
-unclassified:
-  bitbucketEndpointConfiguration:
-    endpoints:
-    - bitbucketCloudEndpoint:
-        manageHooks: false
-tool:
-  git:
-    installations:
-    - home: "git"
-      name: "Default"
-  jdk:
-    defaultProperties:
-    - installSource:
-        installers:
-        - jdkInstaller:
-            acceptLicense: false
-    installations:
-    - home: "/usr/lib/jvm/java-1.8.0"
-      name: "JAVA_HOME"
- 
+   maven: "3.6.0"
