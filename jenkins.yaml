@@ -35,11 +35,3 @@ tool:
           installers:
           - sonarRunnerInstaller:
               id: "3.3.0.1492"
-  MavenInstallation:
-    installations:
-    - name: "MAVEN_HOME"
-      properties:
-      - installSource:
-          installers:
-          - mavenInstaller:
-              id: "3.6.0"
