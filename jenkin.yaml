@@ -1,7 +1,6 @@
 plugins:
-  sites:
-  - id: "default"
-    url: "https://updates.jenkins.io/update-center.json"
+required:
+   nodejs: "9.11.2"
 jenkins:
   disableRememberMe: false
   labelString: "master"
@@ -36,5 +35,4 @@ tool:
     installations:
     - home: "/usr/lib/jvm/java-1.8.0"
       name: "JAVA_HOME"
- required:
-   nodejs: "9.11.2"
+ 
