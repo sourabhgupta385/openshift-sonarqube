@@ -1,0 +1,15 @@
+jenkins:
+  systemMessage: "Hello"
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  maven:
+    installations:
+    - name: "Maven_HOME"
+      properties:
+      - installSource:
+          installers:
+            - maven:
+                id: "3.6.0"
