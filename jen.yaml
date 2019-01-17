@@ -1,4 +1,0 @@
-plugins:
-required:
-   nodejs: "9.11.2"
-   maven: "3.6.0"
